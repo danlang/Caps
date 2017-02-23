@@ -20,7 +20,7 @@ void loop(void)
   sensors_event_t event;
   bno.getEvent(&event);
   double  xpos = event.orientation.x;
-  double ypos = event.orientation.y;
+  double ypos = event.orientation.y; 
   double  zpos = event.orientation.z; // Declare original pos values
   String xposhunddig, xpostensdig, xposonesdig, xposdecdig; //Declaring the digit values of the original pos values
 
@@ -33,12 +33,7 @@ void loop(void)
   Serial.print("\tZ: ");
   // Serial.print(event.orientation.z, 1);
 
-  
-  /* Optional: Display calibration status */
-  displayCalStatus();
-
-  /* Optional: Display sensor status (debug only) */
-  //displaySensorStatus();
+ 
 
   /* New line for the next sample */
   Serial.println("");
